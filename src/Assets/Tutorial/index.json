@@ -1,0 +1,33 @@
+{
+  "/user/all": {
+    "description": "Retorna todos os Usuários"
+  },
+  "/user/websites": {
+    "description": "Retorna os websites dos usuários"
+  },
+  "/user/suites": {
+    "description": "Retorna os dados de todos os usúarios que vivem em suítes"
+  },
+  "/user/basic-data": {
+    "description": "Retorna o nome, email e nome da empresa de todos os usuários, ordenados por nome",
+    "queryParameters": {
+      "sort": {
+        "mandatory": false,
+        "values": {
+          "name": "Retorna os resultados ordenados por nome",
+          "email": "Retorna os resultados ordenados por email",
+          "company": "Retorna os resultados ordenados por empresa"
+        },
+        "exampleOfUse": "/user/basic-data?sort=name"
+      },
+      "order": {
+        "mandatory": false,
+        "values": {
+          "asc": "Retorna os resultados em order ASC (A-Z)",
+          "desc": "Retorna os resultados em order DESC (Z-A)"
+        },
+        "exampleOfUse": "/user/basic-data?order=asc"
+      }
+    }
+  }
+}

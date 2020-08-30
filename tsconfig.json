@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "lib": ["es6"],
+    "typeRoots": ["./node_modules/@types", "./src/Types"],
+    "strict": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipDefaultLibCheck": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "src",
+    "paths": {
+      "@Controllers/*": ["Controllers/*"],
+      "@Services/*": ["Services/*"],
+      "@Utils/*": ["Utils/*"],
+      "@Middlewares/*": ["Middlewares/*"],
+      "@Routes/*": ["Routes/*"],
+      "@Assets/*": ["Assets/*"],
+      "@Types/*": ["Types/*"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}
