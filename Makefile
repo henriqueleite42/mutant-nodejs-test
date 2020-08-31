@@ -16,7 +16,10 @@ build: ## Build the container
 run: ## Run container on port configured
 	docker run -d -t --rm -p=$(PORT):$(PORT) --name="$(APP_NAME)" $(APP_NAME)
 
-up:
+elastic: ## Create the .env file to work with ElasticSearch
+	echo ELASTIC_API_URL=\\nELASTIC_USER=\\nELASTIC_PASS= > .env
+
+up: ## Alias to make build && make run
 	make build; make run
 
 stop: ## Stop and remove a running container

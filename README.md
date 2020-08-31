@@ -33,12 +33,18 @@ sudo make stop
 
 ### Working with ElasticSearch
 
-To work with ElasticSearch, you need to create a `.env` file in the root of the project, and add these three variables:
+To work with ElasticSearch, you need to run the command:
 
 ```sh
-ELASTIC_USER = ElasticSearch_User
-ELASTIC_PASS = ElasticSearch_Password
-ELASTIC_API_URL = ElasticSearch_API_url
+sudo make elastic
+```
+
+And set the values of these three variables in the `.env` file:
+
+```sh
+ELASTIC_USER = ${ ElasticSearch_User }
+ELASTIC_PASS = ${ ElasticSearch_Password }
+ELASTIC_API_URL = ${ ElasticSearch_API_url }
 ```
 
 ## Routes
